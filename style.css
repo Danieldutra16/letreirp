@@ -1,0 +1,61 @@
+/* ===== CENTRALIZA O PAINEL NO MEIO DA TELA ===== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f4f8;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ===== PAINEL DO LETREIRO ===== */
+.container {
+  width: 80%;
+  max-width: 800px;
+  height: 100px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== TEXTO ANIMADO ===== */
+.letreiro {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  white-space: nowrap;
+  animation: deslizar 6s linear infinite;
+}
+
+/* ===== ANIMAÇÃO COM FADE ===== */
+@keyframes deslizar {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; /* invisível ao entrar */
+  }
+  10% {
+    opacity: 1; /* aparece suavemente */
+  }
+  45% {
+    transform: translateX(10%);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1; /* ainda visível */
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0; /* desaparece suavemente */
+  }
+}
